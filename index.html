@@ -1,94 +1,117 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevTools</title>
+    <title>Personal Budget & Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="devtools-window">
-        <header class="window-bar">
-            <div class="traffic-lights">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-            </div>
-            <div class="window-title">developer-tools</div>
-            <div class="window-actions">
-                <span>▢</span>
-                <span>×</span>
-            </div>
-        </header>
 
-        <div class="toolbar">
-            <div class="tab-group">
-                <button class="tab active">Elements</button>
-                <button class="tab">Console</button>
-                <button class="tab">Network</button>
-                <button class="tab">Sources</button>
-            </div>
-            <div class="toolbar-right">
-                <span class="pill">Live</span>
-                <span class="pill muted">Mobile</span>
-            </div>
-        </div>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+             alt="Budget tracker icon"
+             width="80">
 
-        <main class="devtools-body">
-            <aside class="sidebar">
-                <div class="sidebar-header">DOM Tree</div>
-                <ul class="tree">
-                    <li><span class="node-tag">body</span></li>
-                    <li class="nested">
-                        <span class="node-tag">div.app-shell</span>
-                        <ul>
-                            <li><span class="node-tag">header.topbar</span></li>
-                            <li><span class="node-tag">main.dashboard</span></li>
-                            <li><span class="node-tag">section.panel</span></li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
+        <h1>My Budget Tracker</h1>
 
-            <section class="code-panel">
-                <div class="code-header">
-                    <span>index.html</span>
-                    <span class="status">Ready</span>
-                </div>
-                <pre class="code-block"><code><span class="token tag">&lt;section</span> <span class="token attr">class=</span><span class="token value">"panel"</span><span class="token tag">&gt;</span>
-    <span class="token tag">&lt;h2&gt;</span>Developer Tools<span class="token tag">&lt;/h2&gt;</span>
-    <span class="token tag">&lt;p&gt;</span>Inspect layout, debug styles, and monitor runtime activity.<span class="token tag">&lt;/p&gt;</span>
-    <span class="token tag">&lt;button</span> <span class="token attr">type=</span><span class="token value">"button"</span><span class="token tag">&gt;</span>Open Console<span class="token tag">&lt;/button&gt;</span>
-<span class="token tag">&lt;/section&gt;</span></code></pre>
-            </section>
+        <p>Track your income and expenses in one place.</p>
+    </header>
 
-            <aside class="inspector-panel">
-                <div class="inspector-header">Computed</div>
-                <div class="metrics">
-                    <div>
-                        <span>Layout</span>
-                        <strong>Flex</strong>
-                    </div>
-                    <div>
-                        <span>Theme</span>
-                        <strong>Dark</strong>
-                    </div>
-                    <div>
-                        <span>Viewport</span>
-                        <strong>1280×720</strong>
-                    </div>
-                </div>
+    <section id="add-expense">
+        <h2>Add Expense</h2>
 
-                <div class="console-box">
-                    <div class="console-line info">INFO  App loaded successfully</div>
-                    <div class="console-line warn">WARN  CSS variables refreshed</div>
-                    <div class="console-line error">ERROR  No blocking issues found</div>
-                </div>
-            </aside>
-        </main>
-    </div>
+        <form>
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" placeholder="Expense name">
+
+            <label for="expense-amount">Amount:</label>
+            <input type="number" id="expense-amount" placeholder="Amount">
+
+            <label for="expense-category">Category:</label>
+            <select id="expense-category">
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Rent</option>
+                <option>Entertainment</option>
+                <option>Other</option>
+            </select>
+
+            <button type="button">Add Expense</button>
+        </form>
+    </section>
+
+    <section class="expenses-section">
+        <h2>Your Expenses</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Lunch</td>
+                    <td>$10</td>
+                    <td>Food</td>
+                    <td>2026-09-15</td>
+                </tr>
+
+                <tr>
+                    <td>Bus Fare</td>
+                    <td>$5</td>
+                    <td>Transport</td>
+                    <td>2026-09-16</td>
+                </tr>
+
+                <tr>
+                    <td>Rent</td>
+                    <td>$300</td>
+                    <td>Rent</td>
+                    <td>2026-09-17</td>
+                </tr>
+
+                <tr>
+                    <td>Movie</td>
+                    <td>$15</td>
+                    <td>Entertainment</td>
+                    <td>2026-09-18</td>
+                </tr>
+
+                <tr>
+                    <td>Groceries</td>
+                    <td>$50</td>
+                    <td>Food</td>
+                    <td>2026-09-19</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <details>
+            <summary>How to use this tracker</summary>
+            <p>Enter the expense name, amount, and category in the form above. The expense table shows sample expenses that will later be updated using JavaScript.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Budgeting Tips</h2>
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/4s4YV7lLq7Y"
+            title="Budgeting tips video"
+            frameborder="0">
+        </iframe>
+    </section>
+
 </body>
 </html>
-```
-
