@@ -1,0 +1,94 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="devtools-window">
+        <header class="window-bar">
+            <div class="traffic-lights">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="window-title">developer-tools</div>
+            <div class="window-actions">
+                <span>▢</span>
+                <span>×</span>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <div class="tab-group">
+                <button class="tab active">Elements</button>
+                <button class="tab">Console</button>
+                <button class="tab">Network</button>
+                <button class="tab">Sources</button>
+            </div>
+            <div class="toolbar-right">
+                <span class="pill">Live</span>
+                <span class="pill muted">Mobile</span>
+            </div>
+        </div>
+
+        <main class="devtools-body">
+            <aside class="sidebar">
+                <div class="sidebar-header">DOM Tree</div>
+                <ul class="tree">
+                    <li><span class="node-tag">body</span></li>
+                    <li class="nested">
+                        <span class="node-tag">div.app-shell</span>
+                        <ul>
+                            <li><span class="node-tag">header.topbar</span></li>
+                            <li><span class="node-tag">main.dashboard</span></li>
+                            <li><span class="node-tag">section.panel</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="code-panel">
+                <div class="code-header">
+                    <span>index.html</span>
+                    <span class="status">Ready</span>
+                </div>
+                <pre class="code-block"><code><span class="token tag">&lt;section</span> <span class="token attr">class=</span><span class="token value">"panel"</span><span class="token tag">&gt;</span>
+    <span class="token tag">&lt;h2&gt;</span>Developer Tools<span class="token tag">&lt;/h2&gt;</span>
+    <span class="token tag">&lt;p&gt;</span>Inspect layout, debug styles, and monitor runtime activity.<span class="token tag">&lt;/p&gt;</span>
+    <span class="token tag">&lt;button</span> <span class="token attr">type=</span><span class="token value">"button"</span><span class="token tag">&gt;</span>Open Console<span class="token tag">&lt;/button&gt;</span>
+<span class="token tag">&lt;/section&gt;</span></code></pre>
+            </section>
+
+            <aside class="inspector-panel">
+                <div class="inspector-header">Computed</div>
+                <div class="metrics">
+                    <div>
+                        <span>Layout</span>
+                        <strong>Flex</strong>
+                    </div>
+                    <div>
+                        <span>Theme</span>
+                        <strong>Dark</strong>
+                    </div>
+                    <div>
+                        <span>Viewport</span>
+                        <strong>1280×720</strong>
+                    </div>
+                </div>
+
+                <div class="console-box">
+                    <div class="console-line info">INFO  App loaded successfully</div>
+                    <div class="console-line warn">WARN  CSS variables refreshed</div>
+                    <div class="console-line error">ERROR  No blocking issues found</div>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
+```
+
