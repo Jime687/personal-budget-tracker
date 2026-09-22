@@ -1,102 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+body {
+  background-color: #f4f1f8;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+  color: #5b2c6f;
 }
 
 header {
-    text-align: center;
+  background-color: white;
+  border: 2px solid #d8c5e5;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  padding: 25px;
+  text-align: center;
 }
 
-/* Add Expense section */
-#add-expense {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
+section {
+  background-color: white;
+  border: 2px solid #d8c5e5;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  padding: 25px;
 }
 
-/* Form styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
 input,
 select {
-    padding: 10px;
-    width: 250px;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
 }
 
-/* Focus selector */
-input:focus {
-    border: 2px solid blue;
-    outline: none;
-}
-
-/* Button */
 button {
-    padding: 10px;
-    width: 150px;
-    cursor: pointer;
+  background-color: #5b2c6f;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 10px 18px;
 }
 
-/* Expenses section */
-.expenses-section {
-    background-color: #e8f5e9;
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
+button:hover {
+  background-color: #452052;
 }
 
-/* Table */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th,
-td {
-    border: 1px solid #999;
-    padding: 10px;
-    text-align: left;
+  border-collapse: collapse;
+  margin-top: 15px;
+  width: 100%;
 }
 
 th {
-    background-color: #4caf50;
-    color: white;
+  background-color: #5b2c6f;
+  color: white;
+  padding: 12px;
+  text-align: left;
 }
 
-/* Position selector */
+td {
+  border: 1px solid #dddddd;
+  padding: 12px;
+}
+
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f4f1f8;
 }
 
-/* Hover selector */
 tr:hover {
-    background-color: #d6f5d6;
-}
-
-/* Descendant selector */
-.expenses-section td {
-    font-size: 16px;
-}
-
-/* Details section */
-details {
-    background-color: white;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-summary {
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #e8dff0;
 }
