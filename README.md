@@ -1,53 +1,82 @@
-# SpendWise Dashboard Shell
+# SpendWise Dashboard
 
 ## Project Description
 
-SpendWise is a static financial dashboard designed as the foundation for a personal budgeting application. The dashboard displays financial categories and a user's available balance in a clean and responsive layout.
+SpendWise is a budgeting dashboard that helps users work with basic financial information. This version uses JavaScript to collect budget and expense information, perform calculations, and display the results in the browser console.
 
-## What I Built
+## JavaScript Concepts Implemented
 
-The dashboard includes:
+### Variables
 
-* A sidebar navigation menu
-* A dashboard header
-* An available balance section
-* Six financial category cards:
+The project uses JavaScript variables to store important budgeting information:
 
-  * Food
-  * Transport
-  * Rent
-  * Entertainment
-  * Savings
-  * Utilities
-* Responsive design for smaller screens
-* Hover and keyboard focus effects on dashboard cards
-* A dark theme using CSS variables and `prefers-color-scheme`
+* `budget` stores the user's monthly budget.
+* `expenses` stores the user's total expenses.
+* `remainingBalance` stores the calculated amount remaining.
 
-## Files
+### User Input
+
+The `prompt()` function is used to collect information from the user.
+
+The user enters:
+
+1. Their monthly budget.
+2. Their total expenses.
+
+`Number()` converts the entered values from text into numbers so that calculations can be performed.
+
+### Calculations
+
+The application calculates the remaining balance by subtracting expenses from the budget.
+
+For example:
+
+```text
+Budget - Expenses = Remaining Balance
+```
+
+### Functions
+
+The project uses a reusable function called `calculateBalance()`.
+
+The function receives the budget and expenses as parameters and returns the remaining balance. Using a function keeps the calculation organized and makes the code reusable.
+
+### Console Output
+
+The calculated results are displayed in the browser console using `console.log()`.
+
+The output includes:
+
+* Budget
+* Expenses
+* Remaining Balance
+
+## Project Files
 
 ### `index.html`
 
-Contains the structure and content of the SpendWise dashboard, including the sidebar, header, balance information, and financial category cards.
+Contains the structure of the SpendWise dashboard and links the JavaScript file.
 
 ### `style.css`
 
-Contains all visual styling for the dashboard. CSS Grid is used for the main page and category layout, while Flexbox is used inside the sidebar, header, and cards.
+Contains the styling, layout, responsive design, CSS Grid, and Flexbox used by the dashboard.
 
-CSS custom properties are defined in `:root` for colors and other design values. A responsive media query changes the layout for screens smaller than 768px.
+### `script.js`
+
+Contains the JavaScript variables, user input, calculations, reusable function, and console output.
 
 ### `README.md`
 
-Provides an explanation of the project, its features, and the purpose of each file.
+Explains the project and the JavaScript concepts implemented.
 
 ## Technologies Used
 
 * HTML5
 * CSS3
+* JavaScript
 * CSS Grid
 * Flexbox
-* CSS Custom Properties
-* Responsive Design
 
 ## Project Status
 
-This is a visual dashboard shell. It currently contains static content and does not include JavaScript functionality or data processing.
+The SpendWise project now has a JavaScript foundation that can collect budgeting information, calculate the remaining balance, and display clearly labeled results in the browser console.
