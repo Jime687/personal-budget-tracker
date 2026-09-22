@@ -1,49 +1,53 @@
-# My Budget Tracker
+# SpendWise Dashboard Shell
 
-## About the Project
+## Project Description
 
-This project is a visual Budget Tracker website created using HTML and CSS. The design was improved to make the application clean, organized, and easy to read.
+SpendWise is a static financial dashboard designed as the foundation for a personal budgeting application. The dashboard displays financial categories and a user's available balance in a clean and responsive layout.
 
 ## What I Built
 
-The Budget Tracker includes:
+The dashboard includes:
 
-* A page heading introducing the Budget Tracker.
-* An Add Expense form with fields for expense name, amount, and category.
-* An Expense Table for displaying expenses.
-* Styled buttons and form inputs.
-* A consistent color palette and typography.
-* Rounded cards using the CSS Box Model.
+* A sidebar navigation menu
+* A dashboard header
+* An available balance section
+* Six financial category cards:
+
+  * Food
+  * Transport
+  * Rent
+  * Entertainment
+  * Savings
+  * Utilities
+* Responsive design for smaller screens
+* Hover and keyboard focus effects on dashboard cards
+* A dark theme using CSS variables and `prefers-color-scheme`
 
 ## Files
 
-### index.html
+### `index.html`
 
-This file contains the structure and content of the Budget Tracker, including the heading, Add Expense form, and Expense Table.
+Contains the structure and content of the SpendWise dashboard, including the sidebar, header, balance information, and financial category cards.
 
-### style.css
+### `style.css`
 
-This file controls the visual design of the website. It includes:
+Contains all visual styling for the dashboard. CSS Grid is used for the main page and category layout, while Flexbox is used inside the sidebar, header, and cards.
 
-* A consistent color palette.
-* Google Fonts for headings and body text.
-* Table and form styling.
-* Padding, margins, borders, and border-radius.
-* Alternating table row colors.
-* Button hover styling.
+CSS custom properties are defined in `:root` for colors and other design values. A responsive media query changes the layout for screens smaller than 768px.
 
-### README.md
+### `README.md`
 
-This file explains the project and describes what each file does.
-
-## Design
-
-I used a purple, white, and light background color palette to create a clean and professional appearance. The page uses Merriweather for headings and Open Sans for body text.
+Provides an explanation of the project, its features, and the purpose of each file.
 
 ## Technologies Used
 
 * HTML5
 * CSS3
-* Google Fonts
-* Visual Studio Code
-* GitHub
+* CSS Grid
+* Flexbox
+* CSS Custom Properties
+* Responsive Design
+
+## Project Status
+
+This is a visual dashboard shell. It currently contains static content and does not include JavaScript functionality or data processing.
